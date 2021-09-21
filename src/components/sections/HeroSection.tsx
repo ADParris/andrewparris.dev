@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Typed from 'react-typed';
 
-import { ImageDisplay } from '@components';
+import { ContactButton, ImageDisplay } from '@components';
 import { SectionContainer } from './SectionContainer';
 
 interface IComponentProps {}
@@ -24,13 +24,13 @@ export const HeroSection: React.FC<IComponentProps> = () => {
 	];
 
 	return (
-		<SectionContainer id={0} tag="hero">
-			<div className="flex flex-col hero-wrap items-center">
+		<SectionContainer id={0} tag="top">
+			<div className="hero-wrap">
 				<div className="mb-4 w-1/2">
 					<ImageDisplay alt={name} border rounded src={imageSharp} />
 				</div>
 				<h1>{name}</h1>
-				<h2 className="flex flex-1 text-gray-100 text-opacity-70">
+				<h2 className="text-gray-100 text-opacity-70">
 					<Typed
 						backSpeed={70}
 						loop
@@ -38,6 +38,9 @@ export const HeroSection: React.FC<IComponentProps> = () => {
 						typeSpeed={60}
 					/>
 				</h2>
+				<div className="mt-16">
+					<ContactButton>Contact Me</ContactButton>
+				</div>
 			</div>
 		</SectionContainer>
 	);

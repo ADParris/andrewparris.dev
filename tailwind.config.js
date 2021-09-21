@@ -61,9 +61,16 @@ module.exports = {
 			'teal.700': '#285E61',
 		}),
 		extend: {
+			margin: {
+				'neg-12': '-3rem',
+			},
+			minHeight: {
+				'nearly-full': '97.5vh',
+			},
 			screens: {
 				xs: '480px',
 			},
+			transform: ['hover', 'focus'],
 			zIndex: {
 				'pos-5': 5,
 				'pos-4': 4,

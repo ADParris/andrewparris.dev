@@ -1,9 +1,7 @@
 import React from 'react';
 import Particles, { IOptions } from 'react-tsparticles';
 
-interface IComponentProps {}
-
-export const BackgroundParticles: React.FC<IComponentProps> = () => {
+export const BackgroundParticles: React.FC = () => {
 	const particlesCanvasStyle = {
 		left: 0,
 		position: 'absolute',

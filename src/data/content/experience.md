@@ -1,5 +1,6 @@
 ---
 id: 2
+nav: true
 tag: 'experience'
 title: 'What I Have Learned'
 ---

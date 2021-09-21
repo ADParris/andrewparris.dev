@@ -2,9 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
 
-interface IComponentProps {}
-
-export const Head: React.FC<IComponentProps> = () => {
+export const Head: React.FC = () => {
 	const {
 		site: {
 			siteMetadata: { description, image, siteUrl, title },

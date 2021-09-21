@@ -13,21 +13,27 @@ export const SectionContainer: React.FC<IComponentProps> = ({
 	title,
 }) => {
 	const bgWhite = id % 2 !== 0;
+	const experienceSection = tag === 'experience';
+	const lastSection = tag === 'contact';
 
 	return (
 		<section
-			className={`${
-				bgWhite ? 'bg-gray-100 text-gray-800 ' : ''
-			}clipped flex flex-1 flex-col items-center ${
+			className={`${experienceSection ? 'mt-neg-12 pt-12' : ''} ${
+				lastSection
+					? 'last-section'
+					: bgWhite
+					? 'light-section '
+					: 'dark-section '
+			} ${
 				title ? 'justify-start' : 'justify-center'
-			} min-h-screen section-container`}
+			} section-container`}
 			id={tag}
 		>
 			{title && (
 				<div className="flex justify-end w-full">
-					<div className="before-line-dark flex section-title items-center mb-4">
+					<div className="flex items-center mb-4 section-title">
 						<div className="flex font-mono items-baseline">
-							<span className="mr-1 text-green-700">{`0${id}.`}</span>
+							<span className="section-number">{`0${id}.`}</span>
 							<h3 className="flex items-center whitespace-nowrap">
 								{title}
 							</h3>

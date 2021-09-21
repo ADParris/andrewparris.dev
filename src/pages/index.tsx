@@ -2,23 +2,21 @@ import React from 'react';
 
 import {
 	AboutSection,
+	ContactSection,
 	ExperienceSection,
 	HeroSection,
 	Layout,
 	WorkSection,
 } from '@components';
 
-interface IPageProps {}
-
-const HomePage: React.FC<IPageProps> = () => {
-	return (
-		<Layout>
-			<HeroSection />
-			<AboutSection />
-			<ExperienceSection />
-			<WorkSection />
-		</Layout>
-	);
-};
+const HomePage: React.FC = () => (
+	<Layout>
+		<HeroSection />
+		<AboutSection />
+		<ExperienceSection />
+		<WorkSection />
+		<ContactSection />
+	</Layout>
+);
 
 export default HomePage;

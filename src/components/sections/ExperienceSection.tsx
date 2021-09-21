@@ -16,11 +16,13 @@ export const ExperienceSection: React.FC<IComponentProps> = () => {
 
 	return (
 		<SectionContainer {...frontmatter}>
-			<div
-				className="about-wrap flex flex-1 flex-col headline-info-box info-box-dark"
-				dangerouslySetInnerHTML={{ __html: html }}
-			/>
-			<FlipGallery items={entries.data} />
+			<div className="flex flex-1 flex-col items-center py-8">
+				<div
+					className="info-wrap flex flex-1 flex-col headline-info-box info-box-dark"
+					dangerouslySetInnerHTML={{ __html: html }}
+				/>
+				<FlipGallery items={entries.data} />
+			</div>
 		</SectionContainer>
 	);
 };

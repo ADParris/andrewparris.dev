@@ -3,18 +3,18 @@ import 'swiper/css/effect-flip';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
-
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, {
 	EffectFlip,
 	Pagination,
 	Navigation,
 } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { IContentData } from '@data/models';
+
 import { Note } from './Note';
 
 SwiperCore.use([EffectFlip, Pagination, Navigation]);
@@ -53,7 +53,7 @@ export const FlipGallery: React.FC<IComponentProps> = ({ items }) => {
 
 						return (
 							<SwiperSlide key={item.frontmatter.id}>
-								<div className="flex flex-col">
+								<div className="flex flex-col pb-2">
 									{/* title */}
 									<p className="after-underline font-mono w-min whitespace-nowrap">
 										{item.frontmatter.title}

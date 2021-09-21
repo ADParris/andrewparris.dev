@@ -1,5 +1,6 @@
 ---
 id: 3
+nav: true
 tag: 'work'
 title: 'Things I Have Made'
 ---
